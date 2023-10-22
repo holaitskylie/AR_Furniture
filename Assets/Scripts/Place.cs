@@ -23,11 +23,40 @@ public class Place : MonoBehaviour
     //사용자가 선택한 가구 프리팹이 할당
     GameObject select;
 
+    private float scale = 1.0f;
+    private float angle = 0.0f;   
+
+    //private const float angleMin = 0.1f;
+    //private const float angleMax = 1f;
 
     // Start is called before the first frame update
     void Start()
     {
         
+    }
+
+    //활성화 된 오브젝트의 스케일값 조정
+    public void UpdateScale(float sliderValue)
+    {
+        scale = sliderValue;
+
+        if(select)
+        {
+            select.transform.localScale = Vector3.one * scale;
+        }       
+
+    }
+
+    //활성화 된 오브젝트의 로테이션값 조정
+   public void UpdateRotation(float sliderValue)
+    {
+        angle = sliderValue;
+
+        if(select)
+        {
+            select.transform.rotation = Quaternion.Euler(new Vector3(0, angle, 0));
+            //select.transform.rotation = Quaternion.AngleAxis(angle, Vector3.up);
+        }
     }
 
     //사용자가 가구를 선택하고 배치할 때 마다 호출
@@ -58,7 +87,9 @@ public class Place : MonoBehaviour
 
                     //배치할 때 스케일 값(1,1,1)로 지정
                     //가구를 배치할 때 항상 일정한 크기로 표시하게 한다
-                    select.transform.localScale = new Vector3(1, 1, 1);
+                    //select.transform.localScale = new Vector3(1, 1, 1);
+                    select.transform.localScale = Vector3.one * scale; //슬라이더에서 설정한 값으로 스케일 조정
+                    select.transform.rotation = Quaternion.Euler(new Vector3(0, angle, 0)); //슬라이더에서 설정한 값으로 회전 조정
                 }
                 else
                 {
