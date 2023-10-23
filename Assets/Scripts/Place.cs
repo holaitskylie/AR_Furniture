@@ -122,7 +122,9 @@ public class Place : MonoBehaviour
     //선택된 가구를 화면에 배치한다 : pool 오브젝트의 자식으로 들어가게 된다
     public void Set()
     {
-        select.transform.localScale = new Vector3(1, 1, 1);
+        //select.transform.localScale = new Vector3(1, 1, 1);
+        select.transform.localScale = Vector3.one * scale;
+        select.transform.rotation = Quaternion.Euler(new Vector3(0, angle, 0));
 
         //select 오브젝트를 pool의 자식으로 들어가게 한다
         select.transform.SetParent(pool);
