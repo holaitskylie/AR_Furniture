@@ -24,17 +24,9 @@ public class Place : MonoBehaviour
     GameObject select;
 
     private float scale = 1.0f;
-    private float angle = 0.0f;   
+    private float angle = 0.0f;    
 
-    //private const float angleMin = 0.1f;
-    //private const float angleMax = 1f;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+   
     //활성화 된 오브젝트의 스케일값 조정
     public void UpdateScale(float sliderValue)
     {
@@ -54,42 +46,41 @@ public class Place : MonoBehaviour
 
         if(select)
         {
-            select.transform.rotation = Quaternion.Euler(new Vector3(0, angle, 0));
-            //select.transform.rotation = Quaternion.AngleAxis(angle, Vector3.up);
+            select.transform.rotation = Quaternion.Euler(new Vector3(0, angle, 0));           
         }
     }
 
     //사용자가 가구를 선택하고 배치할 때 마다 호출
     //가구를 배치할 때 해당 가구 오브젝트 스케일을 조정하여 보이거나 감추는 역할을 한다
     void Update()
-    {
+    {      
+
         //사용자가 가구를 선택한 상태이다
         if(select != null)
-        {
+        {           
+
             //스크린의 센터점(2D 좌표의 가운데 점 : 가로 중심, 세로 중심의 좌표)를 저장
             vCenter = new Vector2(Screen.width * 0.5f, Screen.height * 0.5f);
 
-            //스크린 중아에 레이캐스트를 쏴서 평면과 부딪힌 것들을 hits에 저장
-            //TrackableType.PlaneWithinPolygon : 평면을 감지하는 폴리곤
+            //스크린 중앙에 레이캐스트를 쏴서 평면과 부딪힌 것들을 hits에 저장            
             //카메라를 통해 들어온 정보를 통해 평면을 감지 (폴리곤을 통해 감지한 타입이 평면이면 감지한 것)
-            if (rayManager.Raycast(vCenter, hits, TrackableType.PlaneWithinPolygon))
+           if (rayManager.Raycast(vCenter, hits, TrackableType.PlaneWithinPolygon))           
             {
                 //충돌한 오브젝트가 평면인지 확인하기 위해 사용
                 //0번은 감지한 것 중 가장 가깝고 큰 평면
                 //리스트의 첫 번째 요소(충돌한 가장 가까운 오브젝트)의 trackable 컴포넌트를 가져와 ARPlane 타입의 변수 plane에 저장
                 ARPlane plane = hits[0].trackable.GetComponent<ARPlane>();
 
+                
+
                 //충돌한 오브젝트가 평면으로 감지된 경우
-                if(plane != null) { 
+                if(plane != null) {                
                     //감지해 들어온 정보(바닥 평면을 감지한)의 위치값을 통해 오브젝트를 위치 시킨다
                     //사용자가 가구를 움직일 때마다 가구가 평면에 따라 움직이게 된다
-                    select.transform.position = hits[0].pose.position;
-
-                    //배치할 때 스케일 값(1,1,1)로 지정
-                    //가구를 배치할 때 항상 일정한 크기로 표시하게 한다
-                    //select.transform.localScale = new Vector3(1, 1, 1);
-                    select.transform.localScale = Vector3.one * scale; //슬라이더에서 설정한 값으로 스케일 조정
-                    select.transform.rotation = Quaternion.Euler(new Vector3(0, angle, 0)); //슬라이더에서 설정한 값으로 회전 조정
+                   select.transform.position = hits[0].pose.position;
+                                      
+                   select.transform.localScale = Vector3.one * scale; //슬라이더에서 설정한 값으로 스케일 조정
+                   select.transform.rotation = Quaternion.Euler(new Vector3(0, angle, 0)); //슬라이더에서 설정한 값으로 회전 조정
                 }
                 else
                 {
@@ -121,8 +112,7 @@ public class Place : MonoBehaviour
 
     //선택된 가구를 화면에 배치한다 : pool 오브젝트의 자식으로 들어가게 된다
     public void Set()
-    {
-        //select.transform.localScale = new Vector3(1, 1, 1);
+    {       
         select.transform.localScale = Vector3.one * scale;
         select.transform.rotation = Quaternion.Euler(new Vector3(0, angle, 0));
 
