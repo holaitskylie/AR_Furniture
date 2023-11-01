@@ -23,29 +23,34 @@ public class Place : MonoBehaviour
     //사용자가 선택한 가구 프리팹이 할당
     GameObject select;
 
+    //오브젝트의 scale과 rotation 값을 저장하는 변수
     private float scale = 1.0f;
-    private float angle = 0.0f;    
+    private float angle = 0.0f;
 
-   
-    //활성화 된 오브젝트의 스케일값 조정
+
+    //슬라이더의 On Value Changed에 의해 슬라이더의 값이 바뀔 때마다 호출
+    //활성화 된 오브젝트의 스케일값 업데이트
     public void UpdateScale(float sliderValue)
     {
         scale = sliderValue;
 
         if(select)
         {
+            //선택된 오브젝트의 local Scale은 Vector3.one * scale로 설정하여
+            //오브젝트의 모든 세 축을 통해 균일하게 스케일 확대/축소 시킨다
             select.transform.localScale = Vector3.one * scale;
         }       
 
     }
 
-    //활성화 된 오브젝트의 로테이션값 조정
+    //활성화 된 오브젝트의 로테이션값 업데이트
    public void UpdateRotation(float sliderValue)
     {
         angle = sliderValue;
 
         if(select)
         {
+            //선택한 오브젝트를 Y축 위주로 angle 값에 따라 회전하는 쿼터니언 생성
             select.transform.rotation = Quaternion.Euler(new Vector3(0, angle, 0));           
         }
     }
