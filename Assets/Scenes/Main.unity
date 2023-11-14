@@ -281,13 +281,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1617391025}
-        m_TargetAssemblyTypeName: Place, Assembly-CSharp
-        m_MethodName: Select
-        m_Mode: 3
+      - m_Target: {fileID: 1335850940}
+        m_TargetAssemblyTypeName: PlaceObjOnPlane, Assembly-CSharp
+        m_MethodName: SetSelecterPrefab
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1633828439064354334, guid: 9b40c8f7bcd17ab45bfd6f0fe57642c1, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 13
           m_FloatArgument: 0
           m_StringArgument: 
@@ -930,7 +930,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1617391026}
+      - m_Target: {fileID: 1335850940}
         m_TargetAssemblyTypeName: PlaceObjOnPlane, Assembly-CSharp
         m_MethodName: UpdateRotation
         m_Mode: 0
@@ -1474,13 +1474,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1617391025}
-        m_TargetAssemblyTypeName: Place, Assembly-CSharp
-        m_MethodName: Select
-        m_Mode: 3
+      - m_Target: {fileID: 1335850940}
+        m_TargetAssemblyTypeName: PlaceObjOnPlane, Assembly-CSharp
+        m_MethodName: SetSelecterPrefab
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 5688124657697982649, guid: 9d7940ca7247e6c4cb447310f5bbbd31, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 8
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1682,13 +1682,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1617391025}
-        m_TargetAssemblyTypeName: Place, Assembly-CSharp
-        m_MethodName: Select
-        m_Mode: 3
+      - m_Target: {fileID: 1335850940}
+        m_TargetAssemblyTypeName: PlaceObjOnPlane, Assembly-CSharp
+        m_MethodName: SetSelecterPrefab
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 4899630060765924143, guid: d92ad77810117714ba6f5dc74094f175, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 6
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2069,13 +2069,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1617391025}
-        m_TargetAssemblyTypeName: Place, Assembly-CSharp
-        m_MethodName: Select
-        m_Mode: 3
+      - m_Target: {fileID: 1335850940}
+        m_TargetAssemblyTypeName: PlaceObjOnPlane, Assembly-CSharp
+        m_MethodName: SetSelecterPrefab
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 4846826162025571085, guid: 439b1d1157a0b3f4d8549aee9ebded2f, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 11
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2202,7 +2202,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1617391025}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Place, Assembly-CSharp
         m_MethodName: Set
         m_Mode: 1
@@ -2335,13 +2335,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1617391025}
-        m_TargetAssemblyTypeName: Place, Assembly-CSharp
-        m_MethodName: Select
-        m_Mode: 3
+      - m_Target: {fileID: 1335850940}
+        m_TargetAssemblyTypeName: PlaceObjOnPlane, Assembly-CSharp
+        m_MethodName: SetSelecterPrefab
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 2399994414097422239, guid: 88004d56a4e43de4eb1bc19332ee77e6, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 10
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2535,13 +2535,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1617391025}
-        m_TargetAssemblyTypeName: Place, Assembly-CSharp
-        m_MethodName: Select
-        m_Mode: 3
+      - m_Target: {fileID: 1335850940}
+        m_TargetAssemblyTypeName: PlaceObjOnPlane, Assembly-CSharp
+        m_MethodName: SetSelecterPrefab
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 7204096272157475824, guid: 94555f72b88cb9e44bbca83c649bf462, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2872,13 +2872,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1617391025}
-        m_TargetAssemblyTypeName: Place, Assembly-CSharp
-        m_MethodName: Select
-        m_Mode: 3
+      - m_Target: {fileID: 1335850940}
+        m_TargetAssemblyTypeName: PlaceObjOnPlane, Assembly-CSharp
+        m_MethodName: SetSelecterPrefab
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 8767177240626848759, guid: 940fdc9db0506664190158c9ce5c086e, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 14
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3080,7 +3080,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1617391025}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Place, Assembly-CSharp
         m_MethodName: Set
         m_Mode: 1
@@ -3307,7 +3307,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1617391025}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Place, Assembly-CSharp
         m_MethodName: Set
         m_Mode: 1
@@ -4134,7 +4134,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1617391026}
+      - m_Target: {fileID: 1335850940}
         m_TargetAssemblyTypeName: PlaceObjOnPlane, Assembly-CSharp
         m_MethodName: UpdateScale
         m_Mode: 0
@@ -4359,13 +4359,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1617391025}
-        m_TargetAssemblyTypeName: Place, Assembly-CSharp
-        m_MethodName: Select
-        m_Mode: 3
+      - m_Target: {fileID: 1335850940}
+        m_TargetAssemblyTypeName: PlaceObjOnPlane, Assembly-CSharp
+        m_MethodName: SetSelecterPrefab
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 6806316434742419672, guid: cdacf85b3a9733f45ab1c90dccd5a102, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 7
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4620,13 +4620,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1617391025}
-        m_TargetAssemblyTypeName: Place, Assembly-CSharp
-        m_MethodName: Select
-        m_Mode: 3
+      - m_Target: {fileID: 1335850940}
+        m_TargetAssemblyTypeName: PlaceObjOnPlane, Assembly-CSharp
+        m_MethodName: SetSelecterPrefab
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 8948542567264211881, guid: 43c1dec6c8cb0b14980d6f88fe42cc7b, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 12
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5116,6 +5116,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1304879898}
   m_CullTransparentMesh: 1
+--- !u!1 &1335850939
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1335850941}
+  - component: {fileID: 1335850940}
+  m_Layer: 0
+  m_Name: ARObjectManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1335850940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335850939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d729bd95348173a45827bce93d5e77c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rayManager: {fileID: 1617391023}
+  arCamera: {fileID: 864064248}
+--- !u!4 &1335850941
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335850939}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1394301191
 GameObject:
   m_ObjectHideFlags: 0
@@ -5476,13 +5522,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1617391025}
-        m_TargetAssemblyTypeName: Place, Assembly-CSharp
-        m_MethodName: Select
-        m_Mode: 3
+      - m_Target: {fileID: 1335850940}
+        m_TargetAssemblyTypeName: PlaceObjOnPlane, Assembly-CSharp
+        m_MethodName: SetSelecterPrefab
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 5293846495971830322, guid: 2b4c0cf90bdb04241a6471f10a2222f6, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5609,13 +5655,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1617391025}
-        m_TargetAssemblyTypeName: Place, Assembly-CSharp
-        m_MethodName: Select
-        m_Mode: 3
+      - m_Target: {fileID: 1335850940}
+        m_TargetAssemblyTypeName: PlaceObjOnPlane, Assembly-CSharp
+        m_MethodName: SetSelecterPrefab
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 5598279194968639415, guid: 587eaa801592d31448052eb3f564f6ca, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5671,8 +5717,6 @@ GameObject:
   - component: {fileID: 1617391021}
   - component: {fileID: 1617391023}
   - component: {fileID: 1617391024}
-  - component: {fileID: 1617391025}
-  - component: {fileID: 1617391026}
   m_Layer: 0
   m_Name: XR Origin
   m_TagString: Untagged
@@ -5740,48 +5784,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PlanePrefab: {fileID: 6218028525322620637, guid: c4966e3c4192c6f42941b2127619effc, type: 3}
   m_DetectionMode: -1
---- !u!114 &1617391025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1617391020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7eb45ab4724288d4a84cda94f0110b30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 7204096272157475824, guid: 94555f72b88cb9e44bbca83c649bf462, type: 3}
-  - {fileID: 2854273431199195048, guid: 54c4daada383f874da5210a3e7eecccd, type: 3}
-  - {fileID: 5297983287364250060, guid: dede0ee45c85693459d0777bd6e1e347, type: 3}
-  - {fileID: 5293846495971830322, guid: 2b4c0cf90bdb04241a6471f10a2222f6, type: 3}
-  - {fileID: 5598279194968639415, guid: 587eaa801592d31448052eb3f564f6ca, type: 3}
-  - {fileID: 807494770432439131, guid: a103c39ddf36ace4f887bec2120b3f72, type: 3}
-  - {fileID: 4899630060765924143, guid: d92ad77810117714ba6f5dc74094f175, type: 3}
-  - {fileID: 6806316434742419672, guid: cdacf85b3a9733f45ab1c90dccd5a102, type: 3}
-  - {fileID: 5688124657697982649, guid: 9d7940ca7247e6c4cb447310f5bbbd31, type: 3}
-  - {fileID: 3646934841543935666, guid: ba6998508a1a27043afd52e4fa44eef5, type: 3}
-  - {fileID: 2399994414097422239, guid: 88004d56a4e43de4eb1bc19332ee77e6, type: 3}
-  - {fileID: 4846826162025571085, guid: 439b1d1157a0b3f4d8549aee9ebded2f, type: 3}
-  - {fileID: 8948542567264211881, guid: 43c1dec6c8cb0b14980d6f88fe42cc7b, type: 3}
-  - {fileID: 1633828439064354334, guid: 9b40c8f7bcd17ab45bfd6f0fe57642c1, type: 3}
-  - {fileID: 8767177240626848759, guid: 940fdc9db0506664190158c9ce5c086e, type: 3}
-  rayManager: {fileID: 1617391023}
-  pool: {fileID: 604620357}
---- !u!114 &1617391026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1617391020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d729bd95348173a45827bce93d5e77c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1677638870
 GameObject:
   m_ObjectHideFlags: 0
@@ -6014,13 +6016,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1617391025}
-        m_TargetAssemblyTypeName: Place, Assembly-CSharp
-        m_MethodName: Select
-        m_Mode: 3
+      - m_Target: {fileID: 1335850940}
+        m_TargetAssemblyTypeName: PlaceObjOnPlane, Assembly-CSharp
+        m_MethodName: SetSelecterPrefab
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 3646934841543935666, guid: ba6998508a1a27043afd52e4fa44eef5, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 9
           m_FloatArgument: 0
           m_StringArgument: 
@@ -6290,13 +6292,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1617391025}
-        m_TargetAssemblyTypeName: Place, Assembly-CSharp
-        m_MethodName: Select
-        m_Mode: 3
+      - m_Target: {fileID: 1335850940}
+        m_TargetAssemblyTypeName: PlaceObjOnPlane, Assembly-CSharp
+        m_MethodName: SetSelecterPrefab
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 5297983287364250060, guid: dede0ee45c85693459d0777bd6e1e347, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
@@ -6741,13 +6743,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1617391025}
-        m_TargetAssemblyTypeName: Place, Assembly-CSharp
-        m_MethodName: Select
-        m_Mode: 3
+      - m_Target: {fileID: 1335850940}
+        m_TargetAssemblyTypeName: PlaceObjOnPlane, Assembly-CSharp
+        m_MethodName: SetSelecterPrefab
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 2854273431199195048, guid: 54c4daada383f874da5210a3e7eecccd, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
@@ -7457,7 +7459,6 @@ GameObject:
   - component: {fileID: 2080561272}
   - component: {fileID: 2080561274}
   - component: {fileID: 2080561273}
-  - component: {fileID: 2080561275}
   m_Layer: 5
   m_Name: Chair Container
   m_TagString: Untagged
@@ -7524,26 +7525,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2080561271}
   m_CullTransparentMesh: 1
---- !u!114 &2080561275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2080561271}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7eb45ab4724288d4a84cda94f0110b30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 7204096272157475824, guid: 94555f72b88cb9e44bbca83c649bf462, type: 3}
-  - {fileID: 2854273431199195048, guid: 54c4daada383f874da5210a3e7eecccd, type: 3}
-  - {fileID: 5297983287364250060, guid: dede0ee45c85693459d0777bd6e1e347, type: 3}
-  - {fileID: 5598279194968639415, guid: 587eaa801592d31448052eb3f564f6ca, type: 3}
-  - {fileID: 5293846495971830322, guid: 2b4c0cf90bdb04241a6471f10a2222f6, type: 3}
-  rayManager: {fileID: 1617391023}
-  pool: {fileID: 604620357}
 --- !u!1 &2085833654
 GameObject:
   m_ObjectHideFlags: 0
@@ -7627,13 +7608,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1617391025}
-        m_TargetAssemblyTypeName: Place, Assembly-CSharp
-        m_MethodName: Select
-        m_Mode: 3
+      - m_Target: {fileID: 1335850940}
+        m_TargetAssemblyTypeName: PlaceObjOnPlane, Assembly-CSharp
+        m_MethodName: SetSelecterPrefab
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 807494770432439131, guid: a103c39ddf36ace4f887bec2120b3f72, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
@@ -7762,3 +7743,4 @@ SceneRoots:
   - {fileID: 862172652}
   - {fileID: 1788299231}
   - {fileID: 604620357}
+  - {fileID: 1335850941}

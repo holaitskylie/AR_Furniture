@@ -15,6 +15,10 @@ public class PlaceObjOnPlane : MonoBehaviour
     //생성된 AR 객체를 저장하기 위한 변수
     private GameObject arObject;
     private GameObject selectedPrafab;
+    private ARObject selectedObject;
+
+    [SerializeField] private Camera arCamera;
+    private RaycastHit physicsHit;
 
     //오브젝트의 scale과 rotation 값을 저장하는 변수
     private float scale = 1.0f; //초기화를 1로 안해주면 0 값이 들어가 화면에 안보임
@@ -57,7 +61,7 @@ public class PlaceObjOnPlane : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        rayManager = GetComponent<ARRaycastManager>();
+        rayManager = FindObjectOfType<ARRaycastManager>();
         selectedPrafab = null;
     }
 
@@ -81,19 +85,62 @@ public class PlaceObjOnPlane : MonoBehaviour
             return;
         }
 
-        //첫 번째 터치가 일어났을 떄만,
-        //첫 번째 터치가 일어난 곳으로 position 값을 받아와 레이를 쏜다
-        //레이를 쏴서 반환되는 객체는 hits에 저장
-        //TrackableType를 PlaneWithinPolygon으로 지정하여 평면 위의 폴리곤에서의 결과값만 hits에 저장
-        if(touch.phase == TouchPhase.Began && rayManager.Raycast(Input.GetTouch(0).position, hits, TrackableType.PlaneWithinPolygon))
+       
+        //첫 번째 터치가 일어났을 때
+        if (touch.phase == TouchPhase.Began)
         {
-            //터치가 발생하면
-            Pose hitPose = hits[0].pose;
-            Instantiate(selectedPrafab, hitPose.position, hitPose.rotation);             
-              
-
+            //ARObject가 아무것도 선택되지 않았다면
+            if (!SelectARObject(touchPosition))
+            {
+                SelectARPlane(touchPosition);
+            }
+        }
+        else if(touch.phase == TouchPhase.Ended) //터치가 끝나면
+        {
+            if (selectedObject)
+            {
+                selectedObject.Selected = false;
+            }
+            
         }
         
+        
+    }
+
+    private bool SelectARObject(Vector2 touchPosition)
+    {
+        //카메라 중심으로 touchPosition에 ray를 쏜다
+        Ray ray = arCamera.ScreenPointToRay(touchPosition);
+        //ray와 물리적인 오브젝트와 충돌하면 physicsHit으로 값이 들어온다
+        if (Physics.Raycast(ray, out physicsHit))
+        {
+            selectedObject = physicsHit.transform.GetComponent<ARObject>();
+            if (selectedObject)
+            {
+                selectedObject.Selected = true;
+                //selected 로 값을 바꿔주면 setter가 일어나 selectedObject의 컬러값 변경
+                return true;
+            }
+        }
+
+        return false;
+
+    }
+
+    private void SelectARPlane(Vector2 touchPosition)
+    {
+        //AR Plane에 터치가 발생하면
+        if (rayManager.Raycast(touchPosition, hits, TrackableType.PlaneWithinPolygon))
+        {
+            
+            Pose hitPose = hits[0].pose;
+
+            var newARObj = Instantiate(selectedPrafab, hitPose.position, hitPose.rotation);
+            //새로운 객체가 생성될 때마다 ARObject 컴포넌트 추가
+            newARObj.AddComponent<ARObject>();
+
+        }
+
     }
 
     //UI Block
