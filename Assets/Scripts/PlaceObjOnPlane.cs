@@ -39,11 +39,11 @@ public class PlaceObjOnPlane : MonoBehaviour
         //슬라이더의 값을 받아와 scale 값으로 할당
         scale = sliderValue;
 
-        if (arObject)
+        if (selectedObject)
         {
             //선택된 오브젝트의 local Scale은 Vector3.one * scale로 설정하여
             //오브젝트의 모든 세 축을 통해 균일하게 스케일 확대/축소 시킨다
-            arObject.transform.localScale = Vector3.one * scale;
+            selectedObject.transform.localScale = Vector3.one * scale;
         }
 
     }
@@ -54,10 +54,10 @@ public class PlaceObjOnPlane : MonoBehaviour
         //슬라이더의 값을 받아와 angle로 할당
         angle = sliderValue;
 
-        if (arObject)
+        if (selectedObject)
         {
             //선택한 오브젝트를 Y축 위주로 angle 값에 따라 회전하는 쿼터니언 생성
-            arObject.transform.rotation = Quaternion.Euler(new Vector3(0, angle, 0));
+            selectedObject.transform.rotation = Quaternion.Euler(new Vector3(0, angle, 0));
         }
     }
 
