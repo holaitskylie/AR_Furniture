@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 25b596e806235374cb789f31149c67d7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0353bd9fed201f043bbe4a62558d02bc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1789,7 +1789,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 25b596e806235374cb789f31149c67d7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0353bd9fed201f043bbe4a62558d02bc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2201,7 +2201,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 529738856}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1335850940}
+        m_TargetAssemblyTypeName: PlaceObjOnPlane, Assembly-CSharp
+        m_MethodName: RemoveSelectedObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &529738856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3067,7 +3079,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 683916663}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1335850940}
+        m_TargetAssemblyTypeName: PlaceObjOnPlane, Assembly-CSharp
+        m_MethodName: RemoveSelectedObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &683916663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3213,7 +3237,7 @@ GameObject:
   - component: {fileID: 714953544}
   - component: {fileID: 714953543}
   m_Layer: 5
-  m_Name: Place Button
+  m_Name: Remove Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3282,7 +3306,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 714953544}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1335850940}
+        m_TargetAssemblyTypeName: PlaceObjOnPlane, Assembly-CSharp
+        m_MethodName: RemoveSelectedObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &714953544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3627,7 +3663,6 @@ GameObject:
   - component: {fileID: 864064246}
   - component: {fileID: 864064245}
   - component: {fileID: 864064244}
-  - component: {fileID: 864064249}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3842,23 +3877,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!114 &864064249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 864064242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b15f82cc229284894964d2d30806969d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HumanSegmentationStencilMode: 0
-  m_HumanSegmentationDepthMode: 0
-  m_EnvironmentDepthMode: 1
-  m_EnvironmentDepthTemporalSmoothing: 1
-  m_OcclusionPreferenceMode: 0
 --- !u!1 &919936465
 GameObject:
   m_ObjectHideFlags: 0
@@ -5747,7 +5765,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlanePrefab: {fileID: 6218028525322620637, guid: c4966e3c4192c6f42941b2127619effc, type: 3}
-  m_DetectionMode: -1
+  m_DetectionMode: 1
 --- !u!1 &1677638870
 GameObject:
   m_ObjectHideFlags: 0
@@ -6879,7 +6897,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 25b596e806235374cb789f31149c67d7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0353bd9fed201f043bbe4a62558d02bc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

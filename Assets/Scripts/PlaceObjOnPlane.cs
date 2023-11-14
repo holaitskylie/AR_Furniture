@@ -92,13 +92,10 @@ public class PlaceObjOnPlane : MonoBehaviour
         //첫 번째 터치가 일어났을 때
         if (touch.phase == TouchPhase.Began)
         {
-            //터치한 곳에 AR 객체가 없다면
-            if (!SelectARObject(touchPosition))
-            {
-                //터치한 곳에 AR 객체를 생성한다
-                SelectARPlane(touchPosition);
-            }
-        }
+            //터치한 곳에 오브젝트가 있는지 확인
+            SelectARObject(touchPosition);
+                        
+        }        
         else if(touch.phase == TouchPhase.Ended) //터치가 끝나면
         {
             if (selectedObject)
@@ -107,8 +104,9 @@ public class PlaceObjOnPlane : MonoBehaviour
             }
             
         }
-        
-        
+
+        SelectARPlane(touchPosition);
+
     }
 
     private bool SelectARObject(Vector2 touchPosition)
@@ -119,6 +117,7 @@ public class PlaceObjOnPlane : MonoBehaviour
         if (Physics.Raycast(ray, out physicsHit))
         {
             selectedObject = physicsHit.transform.GetComponent<ARObject>();
+
             if (selectedObject)
             {
                 selectedObject.Selected = true;
@@ -139,15 +138,39 @@ public class PlaceObjOnPlane : MonoBehaviour
             
             Pose hitPose = hits[0].pose;
 
-            //터치한 곳에 selectedPrefab 생성
-            //var newARObj = Instantiate(selectedPrefab, hitPose.position, hitPose.rotation);
-            arObject = Instantiate(selectedPrefab, hitPose.position, hitPose.rotation);
-           
-            //새로운 객체가 생성될 때마다 ARObject 컴포넌트 추가
-            arObject.AddComponent<ARObject>();
+            //터치한 곳에 오브젝트가 없다 = 평면을 터치한 것이다
+            if(!selectedObject)
+            {
+                //터치한 곳에 selectedPrefab 생성
+                //var newARObj = Instantiate(selectedPrefab, hitPose.position, hitPose.rotation);
+                arObject = Instantiate(selectedPrefab, hitPose.position, hitPose.rotation);
+
+                //새로운 객체가 생성될 때마다 ARObject 컴포넌트 추가
+                selectedObject = arObject.AddComponent<ARObject>();
+
+            }          
+            else if (selectedObject.Selected)
+            {
+                //선택된 오브젝트의 위치 업데이트
+                selectedObject.transform.position = hitPose.position;
+                selectedObject.transform.rotation = hitPose.rotation;
+
+            }        
+                     
                         
         }
 
+    }
+
+    public void RemoveSelectedObject()
+    {
+        //선택된 오브젝트가 있다면
+        if (selectedObject)
+        {
+            //선택된 오브젝트의 게임 오브젝트 삭제
+            Destroy(selectedObject.gameObject);
+            selectedObject = null;
+        }
     }
 
     //UI Block
