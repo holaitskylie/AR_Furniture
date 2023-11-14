@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -25,19 +25,19 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // ¹é¹öÆ°À» ´­·¶À» °æ¿ì °ÔÀÓ Á¾·á
+        // ë°±ë²„íŠ¼ì„ ëˆŒë €ì„ ê²½ìš° ê²Œì„ ì¢…ë£Œ
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();
         }
     }
 
-    // ÀÓÀÇ·Î ¹öÆ°¿¡ OnApplicationPauseÈ£Ãâ
+    // ì„ì˜ë¡œ ë²„íŠ¼ì— OnApplicationPauseí˜¸ì¶œ
     public void SetPause()
     {
         OnApplicationPause(!m_bPause);
     }
-    // ¹é¹öÆ° ´­·¶À» ¶§ ¹ß»ıÇÏ´Â ÇÔ¼ö
+    // ë°±ë²„íŠ¼ ëˆŒë €ì„ ë•Œ ë°œìƒí•˜ëŠ” í•¨ìˆ˜
     void OnApplicationPause(bool pauseStatus)
     {
         m_bPause = pauseStatus;

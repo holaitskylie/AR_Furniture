@@ -25,6 +25,8 @@ public class PlaceObjOnPlane : MonoBehaviour
     private float scale = 1.0f; //초기화를 1로 안해주면 0 값이 들어가 화면에 안보임
     private float angle = 0.0f;
 
+    private UIManager uiManager;
+
     public void SetSelecterPrefab(GameObject selectedPrefab)
     {
         this.selectedPrefab = selectedPrefab;      
@@ -65,6 +67,7 @@ public class PlaceObjOnPlane : MonoBehaviour
     void Awake()
     {
         rayManager = FindObjectOfType<ARRaycastManager>();
+        uiManager = FindObjectOfType<UIManager>();
         selectedPrefab = null;
     }
 
@@ -135,12 +138,13 @@ public class PlaceObjOnPlane : MonoBehaviour
         //AR Plane에 터치가 발생하면
         if (rayManager.Raycast(touchPosition, hits, TrackableType.PlaneWithinPolygon))
         {
-            
+            uiManager.tapToPlaceAnimation = false;
+
             Pose hitPose = hits[0].pose;
 
             //터치한 곳에 오브젝트가 없다 = 평면을 터치한 것이다
             if(!selectedObject)
-            {
+            {              
                 //터치한 곳에 selectedPrefab 생성
                 //var newARObj = Instantiate(selectedPrefab, hitPose.position, hitPose.rotation);
                 arObject = Instantiate(selectedPrefab, hitPose.position, hitPose.rotation);
