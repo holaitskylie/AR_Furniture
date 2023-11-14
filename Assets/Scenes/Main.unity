@@ -5675,6 +5675,7 @@ GameObject:
   - component: {fileID: 1617391023}
   - component: {fileID: 1617391024}
   - component: {fileID: 1617391025}
+  - component: {fileID: 1617391026}
   m_Layer: 0
   m_Name: XR Origin
   m_TagString: Untagged
@@ -5772,6 +5773,18 @@ MonoBehaviour:
   - {fileID: 8767177240626848759, guid: 940fdc9db0506664190158c9ce5c086e, type: 3}
   rayManager: {fileID: 1617391023}
   pool: {fileID: 604620357}
+--- !u!114 &1617391026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617391020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d729bd95348173a45827bce93d5e77c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1677638870
 GameObject:
   m_ObjectHideFlags: 0
