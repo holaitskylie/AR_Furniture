@@ -11,6 +11,8 @@ public class PlaceObjOnPlane : MonoBehaviour
     //Raycast로 감지된 결과를 저장하는 리스트
     List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
+    private GameObject arObject;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -33,7 +35,17 @@ public class PlaceObjOnPlane : MonoBehaviour
             //hits는 리스트로 되어있기 때문에, 가장 먼저 충돌이 일어난 객체의 pose만 가져온다
             var hitPose = hits[0].pose;
 
-            Instantiate(rayManager.raycastPrefab, hitPose.position, hitPose.rotation);           
+            if(!arObject)
+            {
+                arObject = Instantiate(rayManager.raycastPrefab, hitPose.position, hitPose.rotation);
+
+            }
+            else
+            {
+                arObject.transform.position = hitPose.position;
+                arObject.transform.rotation = hitPose.rotation;
+            }
+                  
 
         }
         
