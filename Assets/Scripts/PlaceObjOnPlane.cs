@@ -14,7 +14,8 @@ public class PlaceObjOnPlane : MonoBehaviour
     List<ARRaycastHit> hits = new List<ARRaycastHit>();
     //생성된 AR 객체를 저장하기 위한 변수
     private GameObject arObject;
-    private GameObject selectedPrafab;
+    private GameObject selectedPrefab;
+    
     private ARObject selectedObject;
 
     [SerializeField] private Camera arCamera;
@@ -26,7 +27,15 @@ public class PlaceObjOnPlane : MonoBehaviour
 
     public void SetSelecterPrefab(GameObject selectedPrefab)
     {
-        this.selectedPrafab = selectedPrefab;
+        this.selectedPrefab = selectedPrefab;
+
+        if(selectedPrefab != null )
+        {
+            Destroy( selectedPrefab );
+            selectedPrefab = null;
+        }
+
+        Debug.Log("Object Name: " + selectedPrefab.name);
     }
 
     //슬라이더의 On Value Changed에 의해 슬라이더의 값이 바뀔 때마다 호출
@@ -62,7 +71,7 @@ public class PlaceObjOnPlane : MonoBehaviour
     void Awake()
     {
         rayManager = FindObjectOfType<ARRaycastManager>();
-        selectedPrafab = null;
+        selectedPrefab = null;
     }
 
     // Update is called once per frame
@@ -75,7 +84,7 @@ public class PlaceObjOnPlane : MonoBehaviour
 
         //첫 번째 일어난 터치를 touch에 저장
         Touch touch = Input.GetTouch(0);
-        //touch의 position 값 저장
+        //해당 터치의 화면 상의 위치를 저장
         Vector2 touchPosition = touch.position;
 
         //UI를 AR Raycast보다 우선 순위로 둔다
@@ -89,9 +98,10 @@ public class PlaceObjOnPlane : MonoBehaviour
         //첫 번째 터치가 일어났을 때
         if (touch.phase == TouchPhase.Began)
         {
-            //ARObject가 아무것도 선택되지 않았다면
+            //터치한 곳에 AR 객체가 없다면
             if (!SelectARObject(touchPosition))
             {
+                //터치한 곳에 AR 객체를 생성한다
                 SelectARPlane(touchPosition);
             }
         }
@@ -135,10 +145,13 @@ public class PlaceObjOnPlane : MonoBehaviour
             
             Pose hitPose = hits[0].pose;
 
-            var newARObj = Instantiate(selectedPrafab, hitPose.position, hitPose.rotation);
+            //터치한 곳에 selectedPrefab 생성
+            //var newARObj = Instantiate(selectedPrefab, hitPose.position, hitPose.rotation);
+            arObject = Instantiate(selectedPrefab, hitPose.position, hitPose.rotation);
+           
             //새로운 객체가 생성될 때마다 ARObject 컴포넌트 추가
-            newARObj.AddComponent<ARObject>();
-
+            arObject.AddComponent<ARObject>();
+                        
         }
 
     }
