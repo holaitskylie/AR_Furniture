@@ -66,6 +66,7 @@ public class Place : MonoBehaviour
 
             //스크린의 센터점(2D 좌표의 가운데 점 : 가로 중심, 세로 중심의 좌표)를 저장
             vCenter = new Vector2(Screen.width * 0.5f, Screen.height * 0.5f);
+                        
 
             //스크린 중앙에 레이캐스트를 쏴서 평면과 부딪힌 것들을 hits에 저장            
             //카메라를 통해 들어온 정보를 통해 평면을 감지 (폴리곤을 통해 감지한 타입이 평면이면 감지한 것)
