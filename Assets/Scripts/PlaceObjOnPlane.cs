@@ -27,13 +27,7 @@ public class PlaceObjOnPlane : MonoBehaviour
 
     public void SetSelecterPrefab(GameObject selectedPrefab)
     {
-        this.selectedPrefab = selectedPrefab;
-
-        if(selectedPrefab != null )
-        {
-            Destroy( selectedPrefab );
-            selectedPrefab = null;
-        }
+        this.selectedPrefab = selectedPrefab;      
 
         Debug.Log("Object Name: " + selectedPrefab.name);
     }
