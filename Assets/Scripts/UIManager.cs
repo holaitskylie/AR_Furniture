@@ -7,7 +7,7 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField] GameObject taptoplaceAnim;
     [SerializeField] GameObject infoText;
-    [SerializeField] GameObject waringPanel;
+    [SerializeField] GameObject warningPanel;
     
     private bool IsPlayed;
     public bool tapToPlaceAnimation
@@ -26,14 +26,14 @@ public class UIManager : MonoBehaviour
 
     private void Awake()
     {
-        waringPanel.SetActive(true);
+        warningPanel.SetActive(true);
         taptoplaceAnim.SetActive(false);
         infoText.SetActive(false);
     }
 
     public void CloseWaring()
     {
-        waringPanel.SetActive(false);
+        warningPanel.SetActive(false);
         IsPlayed = true;
         //Tap to place UI È°¼ºÈ­
         taptoplaceAnim.SetActive(true);
