@@ -1,8 +1,9 @@
-# [AR_Furniture](https://youtu.be/BLcmXVanD-U?si=vLoj-lGnf_JRV_6w)
+# [AR_Furniture](https://youtu.be/lSaSL-bPokk?si=jU__OR1Rz0ySHFPw)
 
   <div align=center>	
-  
-<img width="377" alt="AR_Furniture" src="https://github.com/holaitskylie/AR_Furniture/assets/117277650/3bf56d92-3476-4c2f-a26a-6605851b530a">
+    
+![image](https://github.com/holaitskylie/AR_Furniture/assets/117277650/98a528d6-f3c1-45fa-add5-45e2f208c88f)
+
 <br>
 <br>
 
